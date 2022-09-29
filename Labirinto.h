@@ -48,7 +48,7 @@ public:
     bool chegou() const;
 
     // obtém a posição da saída do labirinto
-    constexpr Posicao obtem_alvo() const;
+    Posicao obtem_alvo() const;
 
     // obtém a posição atual no labirinto
     Posicao obtem_posicao() const;

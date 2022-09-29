@@ -3,7 +3,7 @@
 #include "Labirinto.h"
 
 // 250 milissegundos
-constexpr uint32_t PASSO=250;
+const uint32_t PASSO=250;
 
 int main(int c, char **v)
 {

@@ -77,7 +77,7 @@ bool Labirinto::chegou() const {
     return (x == pos.x) && (y == pos.y);
 }
 
-constexpr Posicao Labirinto::obtem_alvo() const {
+Posicao Labirinto::obtem_alvo() const {
     return Posicao{2*w-1,2*h-1};
 }
 
