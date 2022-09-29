@@ -42,7 +42,7 @@ void initrand() {
 
 Labirinto::Labirinto(int largura, int altura): w(largura), h(altura) {
     setlocale(LC_ALL, "");
-    make_maze();
+    reinicia();
 }
 
 void Labirinto::mostra() const {
@@ -129,7 +129,7 @@ Status Labirinto::avanca(Direcao dir, bool volta) {
     return status;
 }
 
-void Labirinto::make_maze() {
+void Labirinto::reinicia() {
     int i, j;
     int h2 = 2 * h + 2, w2 = 2 * w + 2;
     byte **p;

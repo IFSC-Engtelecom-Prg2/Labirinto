@@ -61,8 +61,10 @@ public:
     //    Status::Chegou: avançou-se na direção solicitada e chegou-as à saída do labirinto
     //    Status::NaoAvancou: não foi possível avançar na direção solicitada (tem uma parede)
     Status avanca(Direcao dir, bool volta=false);
+
+    // reinicia o labirinto, apagando as movimentações e retornando para a posição inicial
+    void reinicia();
 private:
-    void make_maze();
     void walk(const Posicao & pos);
 
     uint8_t **cell;
