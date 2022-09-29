@@ -27,6 +27,11 @@ int main(int c, char **v)
         espera(PASSO);
     }
 
+    while (maze.avanca(Direcao::Esquerda,0) != Status::NaoAvancou) {
+        maze.mostra();
+        espera(PASSO);
+    }
+
     std::cout << "Não pode mais avançar. Tecle ENTER para terminar !" << std::endl;
     std::string algo;
     getline(std::cin, algo);
