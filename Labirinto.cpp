@@ -127,7 +127,15 @@ Status Labirinto::avanca(Direcao dir, bool volta) {
             }
             break;
     }
+
+    if (status != Status::NaoAvancou) {
+        passos++;
+    }
     return status;
+}
+
+int Labirinto::obtem_passos() const {
+    return passos;
 }
 
 void Labirinto::reinicia() {
@@ -160,6 +168,7 @@ void Labirinto::reinicia() {
     //solve(1, 1, 2 * w - 1, 2 * h - 1);
     y = 1;
     x = 1;
+    passos = 0;
     cell[y][x] = 127;
 
     //show();

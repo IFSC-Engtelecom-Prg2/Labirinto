@@ -53,6 +53,9 @@ public:
     // obtém a posição atual no labirinto
     Posicao obtem_posicao() const;
 
+    // Obtém a contagem de passos até o momento
+    int obtem_passos() const;
+
     // avança a posição em alguma direção
     // dir: a direção para o movimento (ver enum Direcao)
     // volta: se true, limpa a casa para onde se avançou. Isso pode ser usado para retroceder no labirinto.
@@ -71,6 +74,7 @@ private:
     std::unique_ptr<uint8_t[]> mem;
     int w, h, avail;
     int x=1, y=1;
+    int passos;
 };
 
 // faz uma pausa
