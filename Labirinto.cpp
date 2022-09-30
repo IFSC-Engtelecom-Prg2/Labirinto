@@ -77,7 +77,7 @@ bool Labirinto::chegou() const {
     return (x == pos.x) && (y == pos.y);
 }
 
-constexpr Posicao Labirinto::obtem_alvo() const {
+Posicao Labirinto::obtem_alvo() const {
     return Posicao{2*w-1,2*h-1};
 }
 
@@ -118,6 +118,7 @@ Status Labirinto::avanca(Direcao dir, bool volta) {
             }
             break;
         case Direcao::Direita: // direita
+//            printf("x=%d, y=%d, cell[y][x+1]=%d\n", x, y, cell[y][x+1]);
             if ((x < 2*w) && ((cell[y][x+1] == 0) || (cell[y][x+1] == 127))) {
                 if (volta) cell[y][x] = 0;
                 x+=1;
@@ -157,6 +158,9 @@ void Labirinto::reinicia() {
     /* reset visited marker (it's also used by path finder) */
     each(i, 0, 2 * h) each(j, 0, 2 * w) cell[i][j] &= ~V;
     //solve(1, 1, 2 * w - 1, 2 * h - 1);
+    y = 1;
+    x = 1;
+    cell[y][x] = 127;
 
     //show();
 }
