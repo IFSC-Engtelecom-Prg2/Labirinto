@@ -47,10 +47,10 @@ Labirinto::Labirinto(int largura, int altura): w(largura), h(altura) {
 
 void Labirinto::mostra() const {
     int i, j, c;
-    //each(c,0,31) {
-    //  printf("%d: %lc\n", c, glyph[c]);
-    //}
-    //return;
+
+    // limpa a tela
+    printf("\e[1;1H\e[2J");
+
     each(i, 0, 2 * h) {
         each(j, 0, 2 * w) {
             c = cell[i][j];
