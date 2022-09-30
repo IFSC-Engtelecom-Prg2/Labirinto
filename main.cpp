@@ -12,25 +12,26 @@ int main(int c, char **v)
 
     // Espera 250 ms entre cada movimentação dentro do
     // do labirinto.
-    while (maze.avanca(Direcao::Direita,0) != Status::NaoAvancou) {
+    maze.mostra();
+    while (maze.avanca(Direcao::Direita) != Status::NaoAvancou) {
         maze.mostra();
         espera(PASSO);
     }
 
-    while (maze.avanca(Direcao::Abaixo,0) != Status::NaoAvancou) {
-        maze.mostra();
-        espera(PASSO);
-    }
+//    while (maze.avanca(Direcao::Abaixo) != Status::NaoAvancou) {
+//        maze.mostra();
+//        espera(PASSO);
+//    }
 
-    while (maze.avanca(Direcao::Acima,0) != Status::NaoAvancou) {
-        maze.mostra();
-        espera(PASSO);
-    }
-
-    while (maze.avanca(Direcao::Esquerda,0) != Status::NaoAvancou) {
-        maze.mostra();
-        espera(PASSO);
-    }
+//
+//    while (maze.avanca(Direcao::Esquerda) != Status::NaoAvancou) {
+//        maze.mostra();
+//        espera(PASSO);
+//    }
+//    while (maze.avanca(Direcao::Acima) != Status::NaoAvancou) {
+//        maze.mostra();
+//        espera(PASSO);
+//    }
 
     std::cout << "Não pode mais avançar. Tecle ENTER para terminar !" << std::endl;
     std::string algo;

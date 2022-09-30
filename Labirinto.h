@@ -70,7 +70,7 @@ private:
     uint8_t **cell;
     std::unique_ptr<uint8_t[]> mem;
     int w, h, avail;
-    int x=1, y=2;
+    int x=1, y=1;
 };
 
 // faz uma pausa
